@@ -74,8 +74,8 @@ func ContainsAnagram(row string) bool {
 	return false
 }
 
-func StringToRunes(s string) []int32 {
-	var runes []int32
+func StringToRunes(s string) []rune {
+	var runes []rune
 	for _, r := range s {
 		runes = append(runes, r)
 	}
