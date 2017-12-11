@@ -13,7 +13,6 @@ func main() {
 	}
 
 	input := string(content)
-	fmt.Println(input)
 
 	garbage := false
 	total := 0
@@ -48,6 +47,7 @@ func main() {
 				depth -= 1
 			}
 		}
+
 		i++
 	}
 
