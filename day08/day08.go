@@ -88,7 +88,14 @@ func updateRegister(input string) {
 			registers[element] -= amountInt
 		}
 	} else { // Create new register
-		registers[element] = amountInt
+		registers[element] = 0
+		if direction == "inc" {
+			registers[element] += amountInt
+		}
+
+		if direction == "dec" {
+			registers[element] -= amountInt
+		}
 	}
 }
 
