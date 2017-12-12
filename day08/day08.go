@@ -9,6 +9,7 @@ import (
 )
 
 var registers = make(map[string]int)
+var largestEver = 0
 
 func main() {
 	content, err := ioutil.ReadFile("input.txt")
@@ -68,7 +69,7 @@ func main() {
 	largest := findLargest()
 
 	fmt.Println("Part 1:", largest)
-	fmt.Println("Part 2:", )
+	fmt.Println("Part 2:", largestEver)
 
 }
 
@@ -96,6 +97,11 @@ func updateRegister(input string) {
 		if direction == "dec" {
 			registers[element] -= amountInt
 		}
+	}
+
+	// Check if sum is the largest ever seen
+	if registers[element] > largestEver {
+		largestEver = registers[element]
 	}
 }
 
