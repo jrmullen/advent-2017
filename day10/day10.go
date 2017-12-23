@@ -64,8 +64,7 @@ func main() {
 	skipSize = 0
 
 	// Add the following lengths to the end of the sequence: 17, 31, 73, 47, 23
-	specialSqeuence := []byte("17, 31, 73, 47, 23")
-	content = append(content, specialSqeuence...) // ... allows appending a slice to another slice
+	content = append(content, 17, 31, 73, 47, 23)
 
 	sparseHash := make([]int, 256)
 	for i := range sparseHash {
